@@ -54,7 +54,7 @@ def Load() -> Generator[str,None,list[str]]:
         for j in ListHorizonal(item):
             chunk.append(density[j])
             if len(chunk) == width:
-                outp += f" {' '.join(map(str,chunk))}\n"
+                outp += f" {''.join(map(str,chunk))}\n"
                 chunk = []
         print(f"Loading: |{u'█'*x}{(' '*(size-x))}| {(i/count)*100:3.0f}%",flush=True,end='\r',file=sys.stdout)
         yield outp
